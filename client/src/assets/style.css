@@ -1,0 +1,29 @@
+.card {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.row .card:hover{
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+    transform: scale(1.02);
+}
+.auth{
+    padding: 10px;
+    margin-top: 3.5rem;
+}
+.auth .card{
+    box-shadow: -8px 12px 18px rgb(25,42,70,0.13);
+    margin-bottom: 2.2rem;
+    margin-top: 3.5rem;
+    border-radius: 2px;
+    padding: 20px;
+}
+.auth h3{
+    text-align: center;
+    font-weight: 600;
+}
+
+.bg-login-image {
+    background: url("https://i.pinimg.com/originals/cc/85/99/cc8599f4a81578ce7d7d668e62c31f4a.jpg");
+    background-position: center;
+    background-size: cover;
+  }
