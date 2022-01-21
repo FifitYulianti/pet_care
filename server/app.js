@@ -12,6 +12,9 @@ app.use(cors())
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
+app.get('/', (req,res)=>{
+    res.json('start')
+})
 app.use('/', router)
 
 app.use(errHandler)
