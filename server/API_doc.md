@@ -506,7 +506,84 @@
             "error": "Internal Server Error"
         }
     ```
+---
+### GET ONE DATA Booking
+---
+* URL
 
+    /bookings/:id/pdf-convert
+
+    - axios ('https://api.pspdfkit.com/build')
+
+* Method:
+
+    GET 
+    POST
+
+* URL Params
+
+    /:id
+
+    Required:
+
+        ```
+        id = [integer]
+        ```
+
+* Success
+    * Code : 200 OK
+    * Content :
+    ```
+        {
+            "booking": {
+                "id": 2,
+                "petName": "Muezza",
+                "schedule": "2022-01-27T16:00:00.000Z",
+                "IdCategory": 1,
+                "IdUser": 4,
+                "harga": 75000,
+                "imgUrl": "https://ik.imagekit.io/3iasie8twbl/2_hVYNPk2Ii.jpg",
+                "createdAt": "2022-01-20T00:29:28.922Z",
+                "updatedAt": "2022-01-20T00:29:28.922Z",
+                "User": {
+                    "id": 4,
+                    "email": "uqy@gmail.com",
+                    "password": "$2a$10$lAtb3mUj6w3m.l8Yz9peIOPEud2VuXSNBts1RR4mePhGvZt2TkisS",
+                    "name": "luqy",
+                    "address": "Lombok Barat",
+                    "noHp": "087747402499",
+                    "createdAt": "2022-01-19T01:52:02.575Z",
+                    "updatedAt": "2022-01-19T01:52:02.575Z"
+                },
+                "Category": {
+                    "id": 1,
+                    "name": "Grooming Standart",
+                    "description": "Grooming bersih dengan shampo Khusus yang harum dan berkualitas",
+                    "createdAt": "2022-01-18T13:17:30.256Z",
+                    "updatedAt": "2022-01-18T13:17:30.256Z"
+                }
+            }
+        }
+    ```
+    ```
+    pdf file = 'D:/booking ${petName}.pdf'
+    ```
+* Error Response :
+    * Code : 404 Not Found
+    * Content :
+    ```
+        {
+            "message": "Data Booking dengan id ${id} tidak ditemukan"
+        }
+    ```
+     * Code : 500
+     * Content :
+    ```
+        {
+            "success": false,
+            "error": "Internal Server Error"
+        }
+    ```
 ---
 # API 
 ---

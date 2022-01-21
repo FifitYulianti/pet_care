@@ -86,7 +86,6 @@ class BookingController {
                             <p class="card-text">Harga : Rp ${data.harga}</p>
                             </html>`
                     fs.writeFileSync('./pdf.html', htmlContent)
-                     
                     const form = new FormData()
                     form.append('instructions', JSON.stringify({
                         parts: [
