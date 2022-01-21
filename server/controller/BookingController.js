@@ -97,9 +97,10 @@ class BookingController {
                         ]
                     }))
                     form.append('index.html', htmlContent)
+                    let apiKey = process.env.BEARER_TOKEN
                     axios.post('https://api.pspdfkit.com/build', form, {
                         headers: form.getHeaders({
-                            'Authorization': 'Bearer pdf_live_dAXqLcX7U0Gn15oHuC37GyIhYfrPOnWJgZztuC1PJzJ'
+                            'Authorization': `Bearer ${apiKey}`
                         }),
                         responseType: "stream"
                     })
