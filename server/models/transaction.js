@@ -2,6 +2,7 @@
 const {
   Model
 } = require('sequelize');
+const booking = require('./booking');
 module.exports = (sequelize, DataTypes) => {
   class Transaction extends Model {
     /**
@@ -11,10 +12,20 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Transaction.belongsTo(models.Booking, {foreignKey: 'IdBooking'})
     }
   }
   Transaction.init({
-    IdBooking: DataTypes.INTEGER
+    IdBooking: {
+      type : DataTypes.INTEGER,
+      allowNull: false,
+      validate:{
+        notEmpty:{
+          args: true,
+          msg : 'Id Booking Harus Diisi'
+        }
+      }
+    }
   }, {
     sequelize,
     modelName: 'Transaction',

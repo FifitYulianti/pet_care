@@ -2,7 +2,7 @@
   "development": {
     "username": "postgres",
     "password": "postgres",
-    "database": "pet_care",
+    "database": "pet_care_hacktiv",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },

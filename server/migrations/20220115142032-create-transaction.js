@@ -9,7 +9,12 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       IdBooking: {
-        type: Sequelize.INTEGER
+        allowNull: false,
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Bookings',
+          key: 'id'
+        }
       },
       createdAt: {
         allowNull: false,

@@ -9,19 +9,35 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       petName: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       schedule: {
+        allowNull: false,
         type: Sequelize.DATE
       },
-      IdCategory: {
-        type: Sequelize.INTEGER
+      IdCategory: { 
+        allowNull: false,
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Categories',
+          key: 'id'
+        }
       },
       IdUser: {
-        type: Sequelize.INTEGER
+        allowNull: false,
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Users',
+          key: 'id'
+        }
       },
       harga: {
+        allowNull: false,
         type: Sequelize.INTEGER
+      },
+      imgUrl: {
+        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,
